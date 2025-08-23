@@ -6,11 +6,15 @@ ENV KOKA_VERSION=3.2.2
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
+    build-essential \
     curl \
     gcc \
     g++ \
     make \
+    tar \
     cmake \
+    ninja-build \
+    pkg-config \
     git \
     nodejs \
     npm \
