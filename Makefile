@@ -30,23 +30,23 @@ clean:
 # Algebraic Effects Examples
 effects-basic: build
 	@echo "=== Running Basic Effects Example ==="
-	@docker run --rm $(IMAGE_NAME) koka -e effects_basic.kk
+	@docker run --rm $(IMAGE_NAME) koka -e effectsbasic.kk
 
 effects-yield: build
 	@echo "=== Running Generator/Yield Example ==="
-	@docker run --rm $(IMAGE_NAME) koka -e effects_yield.kk
+	@docker run --rm $(IMAGE_NAME) koka -e effectsyield.kk
 
 effects-async: build
 	@echo "=== Running Async/Await Example ==="
-	@docker run --rm $(IMAGE_NAME) koka -e effects_async.kk
+	@docker run --rm $(IMAGE_NAME) koka -e effectsasync.kk
 
 effects-choice: build
 	@echo "=== Running Non-determinism/Choice Example ==="
-	@docker run --rm $(IMAGE_NAME) koka -e effects_choice.kk
+	@docker run --rm $(IMAGE_NAME) koka -e effectschoice.kk
 
 effects-combined: build
 	@echo "=== Running Combined Effects Example ==="
-	@docker run --rm $(IMAGE_NAME) koka -e effects_combined.kk
+	@docker run --rm $(IMAGE_NAME) koka -e effectscombined.kk
 
 # Run all effect examples
 all-effects: effects-basic effects-yield effects-async effects-choice effects-combined
