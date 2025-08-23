@@ -1,0 +1,11 @@
+.git
+.gitignore
+*.swp
+*.swo
+*~
+.DS_Store
+node_modules/
+out/
+.koka/
+*.exe
+*.out
