@@ -52,6 +52,14 @@ effects-combined: build
 all-effects: effects-basic effects-yield effects-async effects-choice effects-combined
 	@echo "=== All effect examples completed ==="
 
+# Test targets
+test-combined: build
+	@echo "=== Running Combined Effects Tests ==="
+	@docker run --rm $(IMAGE_NAME) koka -e testcombined.kk
+
+test: test-combined
+	@echo "=== All tests completed ==="
+
 # Interactive mode for effect examples
 effects-interactive: build
 	@echo "Starting interactive shell for effect examples..."
